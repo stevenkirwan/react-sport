@@ -3,3 +3,42 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.nav{
+  height:60px;
+  width:100%;
+}
+
+.nav ul{
+  padding:0;
+  margin: 0;
+  width:100%;
+}
+
+.nav ul li{
+  list-style-type: none;
+}
+
+.nav ul li a{
+  line-height: 60px;
+}
+
+.btn-primary {
+  margin:20px 10px 20px 0;
+}
+
+.btn-primary:hover {
+  cursor: pointer;
+}
+
+.team-logo{
+  padding:20px 40px 40px 40px;
+}
+
+.card{
+  margin-bottom:20px;
+}
+
+.card-block{
+  padding:30px;
+}
