@@ -13,7 +13,7 @@ export default class NextFiveMatchesList extends Component {
   }
 
   componentWillMount() {
-    const URL_NEXTMATCH = `http://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=${this.props.teamId}`;
+    const URL_NEXTMATCH = `/api/next-events/${this.props.teamId}`;
 
     axios
       .get(URL_NEXTMATCH)

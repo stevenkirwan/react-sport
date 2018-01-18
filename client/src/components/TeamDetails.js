@@ -11,7 +11,7 @@ export default class TeamDetails extends Component {
     }
 
     componentWillMount() {
-        const URL = `http://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${this.props.teamId}`;
+        const URL = `/api/team/${this.props.teamId}`;
     
         axios
         .get(URL)

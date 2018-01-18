@@ -12,7 +12,7 @@ export default class LastFiveMatchesList extends Component {
   }
 
   componentWillMount() {
-    const URL_LASTMATCH = `http://www.thesportsdb.com/api/v1/json/1/eventslast.php?id=${this.props.teamId}`;
+    const URL_LASTMATCH = `/api/prev-events/${this.props.teamId}`;
 
     axios
       .get(URL_LASTMATCH)
