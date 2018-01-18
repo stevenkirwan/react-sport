@@ -88,24 +88,31 @@ class App extends Component {
             );
         }
     }
+
+    renderFilters() {
+        return(
+            this.state.sports.map( (sport, index) => (
+                <div className="form-check form-check-inline" key={index}>
+                    <label className="form-check-label">
+                        <input
+                            type="checkbox" 
+                            value={sport}
+                            onChange={this.handleClick.bind(this)}
+                            className="form-check-input" 
+                        /> 
+                        {sport}
+                    </label>
+                </div>
+            ))
+        )
+    }
+
     render() {
         return (
             <div className="container">
                 <SearchForm onSearch={term => this.searchLeague(term)}/>
 
-                {this.state.sports.map( (sport, index) => (
-                    <div className="form-check form-check-inline" key={index}>
-                        <label className="form-check-label">
-                            <input
-                                type="checkbox" 
-                                value={sport}
-                                onChange={this.handleClick.bind(this)}
-                                className="form-check-input" 
-                            /> 
-                            {sport}
-                        </label>
-                    </div>
-                ))}
+                { this.renderFilters() }
 
                 { this.renderLeagueList() }
 
