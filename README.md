@@ -1,1 +1,1 @@
-# react-sport app with express backend
+# react sports app with express backend
