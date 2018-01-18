@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import SearchForm from './SearchForm';
 import LeagueRow from './LeagueRow';
 
 export default class League extends Component {
@@ -48,21 +47,6 @@ export default class League extends Component {
                 hasError: true
             })
             console.log('Error fetching and parsing data', error);
-        });
-    }
-
-    searchLeague(term){
-        const URL = `http://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=${term}`;
-
-        axios
-        .get(URL)
-        .then(response => {
-            console.log(response);
-        })
-        .catch(error => {
-            this.setState({
-                hasError: true
-            });
         });
     }
 
